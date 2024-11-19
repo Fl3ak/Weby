@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1990 12:00:00 GMT" />
+    <link id="styles" rel="stylesheet" type="text/css">
+
+    <script>
+        const styles = document.getElementById('styles');
+        styles.href = "./styles.css" + "?" + new Date().getTime();
+    </script>
+
+    <title>Jednoduchá webová stránka - Náš tím</title>
+</head>
+
+<body>
+<script src="ts-built/tscript.js" ></script>
+
+    <!-- JS code -->
+    <script src="script.js"></script>
+
+    <!-- Horné menu -->
+    <nav>
+        <ul>
+            <li><a href="./index.html#home">Domov</a></li>
+            <li><a href="./index.html#gallery">Galéria</a></li>
+            <li><a href="./index.html#blog">Blog</a></li>
+            <li><a href="./index.html#contact">Kontakt</a></li>
+            <li><a href="./ourTeam.html">Náš tím</a></li>
+        </ul>
+        <button class="mobile-menu">Mobilne menu</button>
+    </nav>
+
+    <div class="main-content">
+        <!-- Formular -->
+        <div class="form-container">
+            <h2>Osobné údaje</h2>
+            <form id="personalForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Meno:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="surname">Priezvisko:</label>
+                        <input type="text" id="surname" name="surname" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="birthDate">Dátum narodenia:</label>
+                        <input type="date" id="birthDate" name="birthDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="languages">Ovládam jazyk(y):</label>
+                        <select id="languages" name="languages" multiple>
+                            <option value="slovak">Slovenčina</option>
+                            <option value="english">Angličtina</option>
+                            <option value="german">Nemčina</option>
+                            <option value="french">Francúzština</option>
+                            <option value="spanish">Španielčina</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="avatar">Avatar:</label>
+                        <input type="file" id="avatar" name="avatar" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label for="favoriteColor">Obľúbená farba:</label>
+                        <input type="color" id="favoriteColor" name="favoriteColor">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <fieldset>
+                            <legend>Pohlavie:</legend>
+                            <label>
+                                <input type="radio" name="gender" value="male">
+                                Muž
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="female">
+                                Žena
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="prefer_not_to_say">
+                                Nechcem neuviesť
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <label for="likeCoding">Baví ma programovanie:</label>
+                        <input type="checkbox" id="likeCoding" name="likeCoding">
+                    </div>
+                </div>
+
+                <label for="aboutMe">Niečo o mne:</label>
+                <textarea id="aboutMe" name="aboutMe" rows="4"></textarea>
+
+                <button class="submit-button" type="submit" form="personalForm">Odoslať</button>
+            </form>
+        </div>
+
+        <div class="output-container">
+            <h2>Výstup JSON</h2>
+            <pre id="output"></pre>
+        </div>
+    </div>
+</body>
+</html>

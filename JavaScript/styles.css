@@ -1,0 +1,199 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* Horné menu */
+nav {
+	background-color: #83bf00;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+nav ul li {
+	display: inline;
+	margin-right: 20px;
+}
+nav ul li a {
+	color: white;
+	text-decoration: none;
+}
+/* Galéria */
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	justify-content: space-around;
+	margin: 20px;
+}
+.gallery img {
+	width: 30%;
+	height: auto;
+}
+/* Blogový článok */
+.blog {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 20px;
+	padding: 20px;
+	background-color: #f4f4f4;
+	border-radius: 8px;
+}
+.blog button {
+	width: 90px;
+}
+.blog h2 {
+	margin-top: 0;
+}
+/* Footer */
+footer {
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 10px 0;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+}
+
+.mobile-menu {
+	display: none;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+@media (max-width: 500px) {
+	.gallery img {
+		width: 100%;
+	}
+
+	nav ul {
+		display: none;
+	}
+
+	.mobile-menu {
+		display: block;
+	}
+}
+
+/* Our team */
+.main-content {
+    display: flex;
+    justify-content: center;
+    background-color: #f0f2f5;
+    gap: 60px;
+    margin: 0;
+    padding: 20px;
+}
+
+
+.form-container,
+.output-container {
+    width: 50%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+label {
+    margin: 10px 0 5px;
+    color: #333333;
+    font-weight: bold;
+}
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"],
+input[type="date"],
+input[type="checkbox"],
+fieldset,
+textarea,
+select {
+    padding: 8px;
+    margin: 0 0 10px 0;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+label:has(+ input:required):after {
+    content: ' *';
+    color: red;
+  }
+
+.submit-button {
+    padding: 10px;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.output-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+pre {
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #cccccc;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
