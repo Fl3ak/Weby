@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1990 12:00:00 GMT" />
+
+    <link id="styles" rel="stylesheet" type="text/css">
+
+    <script>
+        const styles = document.getElementById('styles');
+
+        const timestamp = new Date().getTime();
+        styles.href = "./styles.css" + "?" + timestamp;
+    </script>
+
+    <title>Zoznam klientov</title>
+</head>
+
+<body>
+    <!-- JS code -->
+    <script src="ts-built/clients.js"></script>
+
+    <!-- Horné menu -->
+    <nav>
+        <ul>
+            <li><a href="./index.html#home">Domov</a></li>
+            <li><a href="./index.html#gallery">Galéria</a></li>
+            <li><a href="./index.html#blog">Blog</a></li>
+            <li><a href="./index.html#contact">Kontakt</a></li>
+            <li><a href="./ourTeam.html">Náš tím</a></li>
+            <li><a href="./clients.html">Zoznam klientov</a></li>
+        </ul>
+        <button class="mobile-menu">Mobilne menu</button>
+    </nav>
+
+    <div class="main-content">
+        <button type="button" class="submit-button" onclick="loadData()">Fetch clients</button>
+    </div>
+
+    <div class="main-content">
+        <div id="clients-container"></div>
+    </div>
+
+</body>
+
+</html>

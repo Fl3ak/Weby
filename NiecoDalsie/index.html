@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+	<title>Jednoduchá webová stránka</title>
+</head>
+
+<body>
+    <!-- JS code -->
+    <script src="script.js"></script>
+
+	<!-- Horné menu -->
+	<nav>
+		<ul>
+			<li><a href="#home">Domov</a></li>
+			<li><a href="#gallery">Galéria</a></li>
+			<li><a href="#blog">Blog</a></li>
+			<li><a href="#contact">Kontakt</a></li>
+            <li><a href="./ourTeam.html">Náš tím</a></li>
+			<li><a href="./clients.html">Zoznam klientov</a></li>
+		</ul>
+		<button class='mobile-menu'>Mobilne menu</button>
+	</nav>
+
+	<!-- Galéria -->
+	<section id="gallery" class="gallery">
+		<img src="https://via.placeholder.com/300x200" alt="Obrázok 1">
+		<img src="https://via.placeholder.com/300x200" alt="Obrázok 2">
+		<img src="https://via.placeholder.com/300x200" alt="Obrázok 3">
+	</section>
+
+	<!-- Blogový článok -->
+	<div class='flex-container'>
+		<section class="blog">
+			<h2>Blogový článok 1</h2>
+			<p>Vitajte na našom blogu! Toto je krátky úvodný článok, kde vám predstavíme našu webovú stránku. Naše ciele sú jednoduché: zdieľať zaujímavé informácie, novinky a tipy. Sledujte nás, aby ste sa dozvedeli viac!</p>
+		</section>
+
+		<section class="blog">
+			<h2>Blogový článok 2</h2>
+			<p>Vitajte na našom blogu! Toto je krátky úvodný článok, kde vám predstavíme našu webovú stránku. Naše ciele sú jednoduché: zdieľať zaujímavé informácie, novinky a tipy. Sledujte nás, aby ste sa dozvedeli viac!</p>
+			<button id="like_button" onclick="likeBlogPost2()">Like</button>
+			<button onclick="greetings()">Comment</button>
+			<strong id="likes_counter"></strong>
+		</section>
+
+		<section class="blog">
+			<h2>Blogový článok 3</h2>
+			<p>Vitajte na našom blogu! Toto je krátky úvodný článok, kde vám predstavíme našu webovú stránku. Naše ciele sú jednoduché: zdieľať zaujímavé informácie, novinky a tipy. Sledujte nás, aby ste sa dozvedeli viac!</p>
+		</section>
+	</div>
+
+	<!-- Footer -->
+	<footer>
+		<p>&copy; 2024 Moja Webová Stránka</p>
+	</footer>
+
+</body>
+
+</html>

@@ -197,3 +197,35 @@ pre {
     white-space: pre-wrap;
     word-wrap: break-word;
 }
+/* Clients */
+#clients-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 250px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.details h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.details p {
+    margin: 5px 0;
+}

@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",           // CommonJS modules if you're using Node.js
+    "target": "ES2020",             // ES2020 is a good modern target
+    "outDir": "ts-built",           // Your output directory
+    "rootDir": ".",                 // Root directory of your source files
+    "types": [
+      "node"                        // Node.js types for server-side code
+    ],
+    "moduleResolution": "node"
+  }
+}
